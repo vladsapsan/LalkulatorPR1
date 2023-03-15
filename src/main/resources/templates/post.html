@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:text-align="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+
+    <style>
+        input[type=text] {
+            width: 100px;
+            height: 30px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border-radius: 15%;
+            border-width: 2px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Калькулятор</h1>
+
+<form action="/postrez" method="post">
+    <label for="a">Введите a:</label>
+    <input type="text" name="a" id="a" required style="margin-bottom: 20px" align="c"><br>
+
+    <label for="b">Введите b:</label>
+    <input type="text" name="b" id="b" required style="margin-bottom: 20px"><br>
+
+    <label for="rez">Выберите операцию:</label>
+    <select name="rez" id="rez" style="margin-bottom: 20px" >
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br>
+    <input type="submit" name="Выполнить" value="Выполнить" style="margin-bottom: 20px">
+    <h3>Итог:</h3>
+    <p th:text="${data}"/>
+    <a href="/">Вернуться</a>
+</form>
+
+</body>
+</html>
